@@ -7,7 +7,7 @@ import axios from "axios";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  const API_URL = "http://localhost:4000";
+  const API_URL = "https://keeper-mern-server.vercel.app";
 
   async function fetchNotes(){
     try {
