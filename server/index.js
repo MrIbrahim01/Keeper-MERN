@@ -8,7 +8,7 @@ import 'dotenv/config';
 const app = express();
 const port = 4000;
 const uri = process.env.MONGODB_URL;
-
+app.options('*', cors())
 app.use(cors(
     {
         origins:["https://keeper-mern-frontend.vercel.app"],
