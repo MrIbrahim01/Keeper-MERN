@@ -9,7 +9,13 @@ const app = express();
 const port = 4000;
 const uri = process.env.MONGODB_URL;
 
-app.use(cors());
+app.use(cors(
+    {
+        origins:["https://keeper-mern-frontend.vercel.app"],
+        methods:["POST", "GET"],
+        credentials:true
+    }
+));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
